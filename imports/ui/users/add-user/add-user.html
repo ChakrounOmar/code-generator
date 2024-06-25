@@ -1,0 +1,59 @@
+<template name="addUser">
+    <h2>Add a New User</h2>
+    <div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="addUserLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="addUserLabel">Add User</h4>
+                </div>
+                <div class="modal-body">
+                    {{#autoForm id="insertClient" schema=signupSchema}}
+                        <div class="row">
+                            <div class="col-10 offset-1">
+                                {{> afFormGroup name="firstName" placeholder="First Name"}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10 offset-1">
+                                {{> afFormGroup name="lastName" placeholder="Last Name"}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10 offset-1">
+                                {{> afFormGroup name="telephone" placeholder="Phone Number"}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10 offset-1">
+                                {{> afFormGroup name="birthday"}}
+                            </div>
+                        </div>
+                            <div class="row">
+                                <div class="col-10 offset-1">
+                                    {{> afFormGroup name="emailAddress" placeholder="bobofficial@gmail.com"}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="clearfix col-10 offset-1" style="position: relative;">
+                                    {{> afFormGroup name="password" id="passwordSignupInput" placeholder="Enter the password"}}<i class="fa-solid fa-eye-slash mt-4 me-1 eyePassword" id="eyeLoginPassword"></i>
+                                </div> 
+                            </div>                       
+                    {{/autoForm}}
+                    <div class="row">
+                        <div class="col-10 col-md-6 col-sm-6 offset-1 offset-md-3 offset-sm-3">
+                            <div class="text-center">
+                                <button id="signupButton" type="submit" class="border-0 m-auto btn btn-primary w-100 rounded-5 px-3 py-2">
+                                    <strong>Add</strong>
+                                </button>                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary my-3 openModalAddUser">Create User</button>
+</template>

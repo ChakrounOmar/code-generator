@@ -1,0 +1,31 @@
+<template name="sign_up">
+    <div class="col-12">
+        <div class="form-block account-information new-account-information ">
+            <div class="title-account-information"></div>
+            <div class="form-title">Account Information</div>        
+            {{#autoForm id="insertClientSignup" schema=signupSchema}}
+                <div class="row">
+                    <div class="col-xs-12">
+                        {{> afFormGroup name='firstName' placeHolder='Enter First Name' }}
+                    </div>
+                    <div class="col-xs-12">
+                        {{> afFormGroup name='lastName' placeHolder='Enter Last Name'}}
+                    </div>
+                    <div class="col-xs-12">
+                        {{> afFormGroup name='emailAddress' placeHolder='Email Address'}}
+                    </div>
+                    <div class="col-xs-12">
+                        {{> afFormGroup name='password' placeHolder='Password'}}
+                    </div>
+                    <div class="col-xs-12">
+                        {{> afFormGroup name='telephone' placeHolder='Phone Number'}}
+                    </div>
+                    <div class="col-xs-12">
+                        {{> afFormGroup name="birthday"}}
+                    </div>
+                </div>
+                <button id="createClientButton" type="submit" class="btn btn-primary join">JOIN NOW</button>
+            {{/autoForm}}
+        </div>
+    </div>
+</template>

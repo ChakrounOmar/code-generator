@@ -1,0 +1,45 @@
+<template name="editUserModal">
+    <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-labelledby="editUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="editUserModalLabel">Edit User</h4>
+                </div>
+                {{#autoForm id="editClient" schema=editSchema doc=client}}
+                        <div class="row">
+                            <div class="col-10 offset-1">
+                                {{> afFormGroup name="firstName" placeholder="First Name"}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10 offset-1">
+                                {{> afFormGroup name="lastName" placeholder="Last Name"}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10 offset-1">
+                                {{> afFormGroup name="telephone" placeholder="Phone Number"}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10 offset-1">
+                                {{> afFormGroup name="birthday"}}
+                            </div>
+                        </div>                   
+                    {{/autoForm}}
+                    <div class="row">
+                        <div class="col-10 col-md-6 col-sm-6 offset-1 offset-md-3 offset-sm-3">
+                            <div class="text-center">
+                                <button id="editClientButton" type="submit" class="border-0 m-auto btn btn-primary w-100 rounded-5 px-3 py-2">
+                                    <strong>Edit</strong>
+                                </button>                            
+                            </div>
+                        </div>
+                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
